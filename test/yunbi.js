@@ -17,6 +17,16 @@ describe('node-yunbi', () => {
       );
       done();
     });
+    it('should return the right signature when query is string', done => {
+      // example payload from Yunbi api helper page
+      const Yunbi = require('../index')('xxx', 'yyy');
+      const signature = Yunbi.signature('get', '/api/v2/markets', 'foo=bar&tonce=123456789');
+      assert(
+        signature ===
+          'e324059be4491ed8e528aa7b8735af1e96547fbec96db962d51feb7bf1b64dee'
+      );
+      done();
+    });
     it('should throw error if method is unknown', done => {
       const Yunbi = require('../index')('xxx', 'yyy');
       try {

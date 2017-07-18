@@ -12,7 +12,10 @@
     "type": "git",
     "url": "git+https://github.com/SuperDBJ/node-yunbi.git"
   },
-  "keywords": ["CoinQuant", "Yunbi"],
+  "keywords": [
+    "CoinQuant",
+    "Yunbi"
+  ],
   "author": "CoinQuant",
   "license": "MIT",
   "bugs": {
